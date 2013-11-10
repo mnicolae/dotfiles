@@ -1,0 +1,48 @@
+# File:        .screenrc
+# Description: GNU Screen config file
+# Author:      Mihai Nicolae
+
+# If you are using Exceed and xterm, you'll need to add the following to
+# get the scrollbars to work
+termcapinfo xterm ti@:te@
+
+# If you'd like programs that take over your windows, like vim or less,
+# to return to your full window when you quit them, then use:
+altscreen
+
+defscrollback 1024
+
+# Key bindings
+#-------------------------
+# home: go to screen 0
+
+bindkey -k k0 select 0
+
+#-------------------------
+# F1     F2    .     F4          F5      F6      F7    F8           F9    F10      F11      F12
+# <#>    <help>      <list>   <prev>  <other>    .     <next>       <new>                   <cmd>
+#-------------------------
+# F1: show screen title and number (C-A N)
+
+bindkey -k k1 number
+
+# F4: show selection menu (C-A ")
+bindkey -k k4 windowlist -b
+
+#-------------------------
+# F5: previous (C-A p)
+bindkey -k k5 prev
+
+# F6: other (switch to previous).  (C-A a)
+bindkey -k k6 other
+
+# F8: next (C-A n)
+bindkey -k k8 next
+
+#-------------------------
+
+# F9: new screen (C-A c)
+bindkey -k k9 screen
+
+# F12: control-A: (C-A).   example: F12 3 becomes C-A 3
+bindkey -k F2 command
