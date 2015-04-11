@@ -13,6 +13,21 @@ export JAVA_HOME=`/usr/libexec/java_home`
 
 PATH=$PATH:$GRADLE_HOME
 
+# interactive versions of mv, cp, rm
+alias mv='mv -i'
+alias cp='cp -i'
+alias rm='rm -i'
+
+# ls variations
+alias lr='ls -R'
+alias la='ls -a'
+alias ll='ls -l'
+alias lla='ls -al'
+alias llm='ls -l | more'
+alias llam='ls -la | more'
+alias ls='ls -F'
+alias lsl='ls|less'
+
 # Navigation aliases
 alias b="cd .." 
 
