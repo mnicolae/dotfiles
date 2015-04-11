@@ -27,5 +27,13 @@ alias gst='git status -s'
 
 # SSH aliases
 alias cdf="ssh g1mihai@cdf.utoronto.ca"
-alias eos="ssh g1mihai@eos.cs.toronto.edu"
+alias eos="ssh g1mihai@eos.cs.toronto.edu" 
 alias hydra="ssh g1mihai@hydra.isl.sandbox"
+
+# Human readable directory sizes for current dir, sorted descending
+alias du_cwd="du -hsx * | sort -r"
+
+# Setting PATH for Python 3.4
+# The orginal version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
+export PATH
